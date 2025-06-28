@@ -7,8 +7,8 @@
   "description": "bbitq's Blog",
   "icons": [
     {
-      "src": "/yobeier.webp",
-      "sizes": "293x377",
+      "src": "/avatar.webp",
+      "sizes": "245x245",
       "type": "image/webp"
     }
   ],
