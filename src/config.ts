@@ -1,10 +1,10 @@
 export const siteConfig: SiteConfig = {
-    title: "Hi! Jazee",
+    title: "Hi! bbitq",
     language: "zh",
-    description: "Jazee's personal blog. Powered by Astro Blog Theme Blur.",
-    keywords: "Jazee, blog, personal blog, Astro, Astro Blog Theme Blur",
-    author: "Jazee",
-    avatar: "/avatar.png",
+    description: "bbitq's personal blog. Powered by Astro Blog Theme Blur.",
+    keywords: "bbitq, blog, personal blog, Astro, Astro Blog Theme Blur",
+    author: "bbitq",
+    avatar: "/yobeier.jpg",
     favicon: "/favicon.png",
     site: "https://BBitQNull.github.io",
 
@@ -33,12 +33,12 @@ export const socialLinks: SocialLink[] = [
     {
         label: 'GitHub',
         icon: 'mdi-github',
-        url: 'https://github.com/Jazee6'
+        url: 'https://github.com/BBitQNull'
     },
     {
         label: 'Email',
         icon: 'material-symbols:mail-rounded',
-        url: 'mailto:jazee@jaze.top'
+        url: 'mailto:bbitq2233@gmail.com'
     }
 ]
 
