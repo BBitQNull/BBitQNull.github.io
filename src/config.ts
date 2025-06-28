@@ -6,7 +6,7 @@ export const siteConfig: SiteConfig = {
     author: "Jazee",
     avatar: "/avatar.png",
     favicon: "/favicon.png",
-    site: "https://jaze.top",
+    site: "https://BBitQNull.github.io",
 
     page_size: 10,
 }
