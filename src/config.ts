@@ -4,7 +4,7 @@ export const siteConfig: SiteConfig = {
     description: "bbitq's personal blog. Powered by Astro Blog Theme Blur.",
     keywords: "bbitq, blog, personal blog, Astro, Astro Blog Theme Blur",
     author: "bbitq",
-    avatar: "/yobeier_2.jpg",
+    avatar: "/yobeier_2.png",
     favicon: "/yobeier_3.png",
     site: "https://BBitQNull.github.io",
 
