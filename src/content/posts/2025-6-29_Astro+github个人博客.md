@@ -80,7 +80,7 @@ npm install pnpm -g
 
 ### 使用主题安装Astro
 
-可以在Astro官网挑选心仪的主体模版，通过其github用户名和仓库名以主题模版开始新的Astro项目
+可以在Astro官网挑选心仪的主题模版，通过其github用户名和仓库名以主题模版开始新的Astro项目
 
 ```bash
 npm create astro@latest -- --template <github-username>/<github-repo>
@@ -90,7 +90,7 @@ npm create astro@latest -- --template <github-username>/<github-repo>
 
 - 选择项目目录
 - 是否安装依赖（可能安装失败）
-- 是否初始化本地仓库
+- 是否初始化本地仓库（一般选择“是”）
 
 等待项目创建完成
 
@@ -113,7 +113,7 @@ public
 ### 本地仓库设置
 
 ```bash
-git remote add origin git@github.com：<usernme>/<repository name>.git
+git remote add origin git@github.com：<username>/<repository name>.git
 ```
 
 ### 项目文件配置

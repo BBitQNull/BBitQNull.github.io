@@ -5,5 +5,12 @@
     "url": "https://bbitqnull.github.io",
     "description": "bbitq's Blog",
     "avatar": "https://bbitqnull.github.io/avatar.JPG"
+  },
+  {
+    "id": 2,
+    "title": "Yiiong's Blog",
+    "url": "https://blog.yiiong.top",
+    "description": "Yiiong's Blog",
+    "avatar": "https://blog.yiiong.top/img/1731063917682.jpg"
   }
 ]
