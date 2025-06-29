@@ -124,7 +124,7 @@ conda install pandas=2.2.3
 
 在vscode右下角切换python解释器
 
-![](../../../public/jieping2025-06-29-19.16.40.png)
+![](https://bbitqnull.github.io/jieping2025-06-29-19.16.40.png)
 
 等待终端激活生效
 
@@ -191,7 +191,7 @@ kaggle competitions list
 
 在kaggle官网选择你需要的数据集，在Download-Kaggle CLI选项页面下可得到下载命令，在shell中输入即可下载
 
-![](../../../public/jieping2025-06-29-20.43.53.png)
+![](https://bbitqnull.github.io/jieping2025-06-29-20.43.53.png)
 
 ```bash
 kaggle datasets download dansbecker/melbourne-housing-snapshot
