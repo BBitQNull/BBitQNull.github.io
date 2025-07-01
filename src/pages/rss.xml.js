@@ -8,11 +8,17 @@ export async function GET(context) {
         title: siteConfig.title,
         description: siteConfig.description,
         site: context.site,
-        items: posts.map(({data, slug}) => ({
-            title: data.title,
-            description: data.description,
-            link: `/posts/${slug}`,
-            pubDate: data.pubDate,
-        })),
+        items: posts.map(({ data, slug }) => {
+            const pubDate = new Date(data.pubDate);
+            if (isNaN(pubDate.getTime())) {
+                console.error(`Invalid date for post: ${data.title}`);
+            }
+            return {
+                title: data.title,
+                description: data.description,
+                link: `/posts/${slug}`,
+                pubDate: pubDate,
+            };
+        }),
     });
 }
