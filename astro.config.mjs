@@ -22,8 +22,10 @@ export default defineConfig({
                 dark: 'one-dark-pro'
             }
         },
-        remarkPlugins: [remarkModifiedTime],
-        remarkPlugins: [remarkMath],
+        remarkPlugins: [
+            remarkModifiedTime, // 保留时间插件
+            remarkMath          // 添加数学公式插件
+        ],
         rehypePlugins: [rehypeKatex]
     },
 
