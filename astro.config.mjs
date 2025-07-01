@@ -5,8 +5,8 @@ import icon from "astro-icon";
 import {remarkModifiedTime} from "./src/utils/remark-modified-time";
 import {siteConfig} from "./src/config";
 
-import remarkMath from'remark - math';
-import rehypeKatex from'rehype - katex';
+import remarkMath from'remark-math';
+import rehypeKatex from'rehype-katex';
 import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
