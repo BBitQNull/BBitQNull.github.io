@@ -97,7 +97,7 @@ const formatDate = (dateString) => {
                 <!-- 发布日期 -->
                 <Badge icon="material-symbols:calendar-month-rounded">
                     {
-                        new Date(data.pubDate).toLocaleDateString(
+                        new Date(remarkPluginFrontmatter.pubDate).toLocaleDateString(
                             siteConfig.language,
                         )
                     }
@@ -106,7 +106,7 @@ const formatDate = (dateString) => {
                 <!-- 修改日期 -->
                 <Badge icon="material-symbols:edit-calendar-rounded">
                     {
-                        new Date(data.lastModified).toLocaleDateString(
+                        new Date(remarkPluginFrontmatter.lastModified).toLocaleDateString(
                             siteConfig.language,
                         )
                     }
