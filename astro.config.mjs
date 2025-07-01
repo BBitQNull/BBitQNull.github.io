@@ -4,7 +4,9 @@ import sitemap from '@astrojs/sitemap';
 import icon from "astro-icon";
 import {remarkModifiedTime} from "./src/utils/remark-modified-time";
 import {siteConfig} from "./src/config";
-
+import { defineConfig } from 'astro';
+import remarkMath from'remark - math';
+import rehypeKatex from'rehype - katex';
 import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
@@ -20,7 +22,9 @@ export default defineConfig({
                 dark: 'one-dark-pro'
             }
         },
-        remarkPlugins: [remarkModifiedTime]
+        remarkPlugins: [remarkModifiedTime],
+        remarkPlugins: [remarkMath],
+        rehypePlugins: [rehypeKatex]
     },
 
     devToolbar: {
