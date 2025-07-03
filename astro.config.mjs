@@ -19,7 +19,8 @@ export default defineConfig({
         shikiConfig: {
             themes: {
                 light: 'one-light',
-                dark: 'one-dark-pro'
+                dark: 'one-dark-pro',
+                ignoreMissing: true // 忽略缺失的语法定义
             }
         },
         remarkPlugins: [
