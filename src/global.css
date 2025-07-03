@@ -118,7 +118,7 @@ html.dark .astro-code span {
     text-decoration: var(--shiki-dark-text-decoration) !important;
 }
 @layer utilities {
-  .prose p code {
+  p code {
     background-color: rgba(27, 31, 35, 0.05); /* 浅灰色背景 */
     padding: 0.2em 0.4em;
     border-radius: 4px;
@@ -126,8 +126,14 @@ html.dark .astro-code span {
     font-size: 0.9em;
     quotes: none;
   }
-  .prose p code::before,
-  .prose p code::after {
-    content: none;
+  p code::before,
+  p code::after {
+    content: none !important;
+  }
+
+/* 排除pre/code块中的代码（避免影响代码块） */
+  p code:not(pre code)::before,
+  p code:not(pre code)::after {
+    content: none !important;
   }
 }
