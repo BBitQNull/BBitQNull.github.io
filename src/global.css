@@ -123,4 +123,10 @@ p code {
   border-radius: 4px;
   font-family: 'Fira Code', monospace; /* 等宽字体 */
   font-size: 0.9em;
+  quotes: none;
+
+}
+.prose p code::before,
+.prose p code::after {
+    content: none;
 }
