@@ -42,7 +42,7 @@ export const socialLinks: SocialLink[] = [
     },
     {
         label: 'Kaggle',
-        icon: 'FaBrandsKaggle',
+        icon: 'CibKaggle',
         url: 'https://www.kaggle.com/bbitq2233'
     }
 ]
