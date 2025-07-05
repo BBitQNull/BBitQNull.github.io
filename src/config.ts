@@ -39,6 +39,11 @@ export const socialLinks: SocialLink[] = [
         label: 'Email',
         icon: 'material-symbols:mail-rounded',
         url: 'mailto:bbitq2233@gmail.com'
+    },
+    {
+        label: 'Kaggle',
+        icon: 'FaBrandsKaggle',
+        url: 'https://www.kaggle.com/bbitq2233'
     }
 ]
 
