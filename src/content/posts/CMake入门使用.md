@@ -81,3 +81,23 @@ target_include_directories(client PUBLIC ${PROJECT_SOURCE_DIR}/include/client)
 | PRIVATE      |                 源文件仅用于当前目标的编译                 |
 | INTERFACE    |    源文件不用于当前目标，但会传递给依赖该目标的其他目标    |
 | PUBLIC       | 源文件用于当前目标的编译，并且会传递给依赖该目标的其他目标 |
+
+## CMake构建项目
+
+```bash
+# 进入项目根目录
+cd /path/to/simple-chatroom
+
+# 创建 build 目录（如果不存在）
+mkdir -p build
+cd build
+
+# 运行 CMake 生成 Makefile
+cmake ..
+
+# 使用 Make 编译项目
+make
+
+# 查看生成的可执行文件
+ls ../bin/  # 应该看到 server 和 client
+```
