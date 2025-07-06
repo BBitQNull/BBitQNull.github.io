@@ -4,8 +4,6 @@ description: 介绍创建、命名、监听socket；接收、发起、关闭连�
 pubDate: 2025-07-06
 ---
 
-[TOC]
-
 ## 创建socket
 
 Linux一切皆文件。

@@ -4,8 +4,6 @@ description: 讲解CMake的入门使用；多层目录，分级CMakeLists.txt与
 pubDate: 2025-07-06
 ---
 
-[TOC]
-
 ## CMake简介
 
 CMake是一个自动生成makefile的工具。
