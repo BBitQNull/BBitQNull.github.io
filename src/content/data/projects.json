@@ -4,5 +4,11 @@
     "title": "Astro Blog",
     "repo": "https://github.com/BBitQNull/BBitQNull.github.io",
     "description": "Powered by Astro Blur"
+  },
+  {
+    "id": 2,
+    "title": "ChatLite",
+    "repo": "https://github.com/BBitQNull/ChatLite.git",
+    "description": "Simple, linux c/c++ multiplayer chat room"
   }
 ]
