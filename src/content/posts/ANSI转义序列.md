@@ -97,7 +97,7 @@ int main() {
 
 ID:
 
-![256color](https://bbitqnull.github.io/256color.png)
+![256color](/Users/wangsiqi/Web/my_blog/public/256color.png)
 
 大多数终端也支持8-16色。
 
@@ -157,6 +157,23 @@ void getTerminalSize (int* rows, int* cols) {
     // 提取行数和列数
     *rows = w.ws_row;  // 总行数
     *cols = w.ws_col;  // 总列数
+}
+```
+
+### 设置滚动区域
+
+```c++
+#include <iostream>
+#include <string>
+
+// 设置滚动区域（rows 是可见行数）
+void setScrollRegion(int rows) {
+    std::cout << "\033[1;" << rows << "r";  // 设置滚动区域为第1行到第rows行
+}
+
+// 重置滚动区域为整个屏幕
+void resetScrollRegion() {
+    std::cout << "\033[r";  // 重置滚动区域
 }
 ```
 
