@@ -36,7 +36,7 @@ f (x = 10) { }   // 赋值表达式作为条件
 
 在赋值表达式中有左值与右值的概念。
 
-[C++基础-右值&左值](https://bbitqnull.github.io/posts/C++基础-右值&左值-01/)
+[C++基础-右值&左值](https://bbitqnull.github.io/posts/c基础-右值左值/)
 
 ## 语句 Statement
 
