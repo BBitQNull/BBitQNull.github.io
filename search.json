@@ -7,31 +7,45 @@
     "text": "About this blog"
   },
   {
-    "objectID": "posts/welcome/index.html",
-    "href": "posts/welcome/index.html",
-    "title": "Welcome To My Blog",
+    "objectID": "posts/Macos机器学习环境搭建(上)/index.html",
+    "href": "posts/Macos机器学习环境搭建(上)/index.html",
+    "title": "Macos机器学习环境搭建(上)",
     "section": "",
-    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+    "text": "0.1 miniconda安装\nminiconda是精简版Anaconda（一种python发行版），只包含conda，python等基本依赖包。使用conda可以轻松创建多个虚拟环境，隔离不同项目的依赖和系统python，避免污染\nbrew search miniconda\nbrew install --cask miniconda\n\n0.1.1 验证安装\nconda --version\n返回版本号安装成功，若显示命令找不到请配置环境变量\necho 'export PATH=\"/opt/homebrew/anaconda3/bin:$PATH\"' &gt;&gt; ~/.zshrc\nsource ~/.zshrc\n\n\n0.1.2 换源\n编辑以下文件\n${HOME}/.condarc\n若没有找到则运行以下命令先创建\nconda config --set show_channel_urls yes\n然后编辑配置文件\nchannels:\n  - defaults\nshow_channel_urls: true\ndefault_channels:\n  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main\n  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/r\n  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/msys2\ncustom_channels:\n  conda-forge: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud\n  pytorch: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud\n清除索引缓存\nconda clean -i\n验证换源结果\nconda info\n\n\n\n0.2 安装vscode并安装python插件\n略\n\n\n0.3 conda创建虚拟环境\n查找可用python版本\nconda search python\n创建新虚拟环境\nconda create --name yourname python=3.13.5\nconda会自动下载对应python版本和其依赖包\n\n\n0.4 conda激活虚拟环境\n初始化\nconda init zsh\nconda activate yourname\n\n\n0.5 scikit-learn安装\nconda搜索合适版本\nconda search scikit-learn\n安装\nconda install scikit-learn=1.6.1\n\n\n0.6 pandas安装\nconda search pandas\nconda install pandas=2.2.3\n\n\n0.7 使用vscode编码\n在vscode右下角切换python解释器\n等待终端激活生效\n\n0.7.1 验证环境\nconda info --envs\n星号标注的是当前使用的环境\nimport pandas as pd\nfrom sklearn.tree import DecisionTreeRegressor\n未报错且正常使用说明环境配置正确\n\n\n\n0.8 配置kaggle API\n配置kaggle api以便使用CLI方便的从kaggle下载数据集，以便学习使用\n\n0.8.1 下载API Token\n登陆kaggle官网，settings-API-Create new token保存kaggle.json文件\n\n\n0.8.2 安装kaggle api\n在当前conda虚拟环境中安装，便于管理\npip install kaggle\n\n\n0.8.3 验证安装\npip list\n\n\n0.8.4 配置kaggle.json\n将该文件置于以下路径\n~/.kaggle/kaggle.json\n若不存在该目录则手动创建，之后编辑kaggle.json，可以自定义数据集安装路径，如\n{\"username\":\"yourname\",\"key\":\"xxxxxxxxx\",\"path\":\"/Users/yourname/dataset\"}\n\n\n0.8.5 验证配置\nkaggle competitions list\n能看到返回许多数据集说明配置正确\n\n\n\n0.9 访问kaggle官网挑选数据集\n在kaggle官网选择你需要的数据集，在Download-Kaggle CLI选项页面下可得到下载命令，在shell中输入即可下载\nkaggle datasets download dansbecker/melbourne-housing-snapshot\n之后便可以使用了"
   },
   {
-    "objectID": "posts/post-with-code/index.html",
-    "href": "posts/post-with-code/index.html",
-    "title": "Post With Code",
+    "objectID": "posts/Astro+github个人博客/index.html",
+    "href": "posts/Astro+github个人博客/index.html",
+    "title": "Astro+github搭建个人博客",
     "section": "",
-    "text": "This is a post with executable code."
+    "text": "0.1 安装nvm\nbrew install --cask nvm\n\n\n0.2 安装node.js\n\n0.2.1 nvm换源\n编辑 .zshrc 文件\nexport NVM_NODEJS_ORG_MIRROR=https://mirrors.tuna.tsinghua.edu.cn/nodejs-release/\nsource ~/.zshrc\n\n\n0.2.2 搜索node版本\nnvm ls-remote\n\n\n0.2.3 选择偶数版本\nAstro要求偶数版本node.js，根据搜索结果选择 v22.16.0 LTS 版本\nnvm install v22.16.0\n\n\n0.2.4 验证安装结果\nnode -v\nnpm -v\n正常输出版本号则安装成功\n\n\n\n0.3 安装nrm\nnrm是一个npm源管理器，可以方便换源及测速\nnpm install -g nrm\n\n0.3.1 查看可用源\nnrm ls\n\n\n0.3.2 测速\nnrm test\n\n\n0.3.3 切换源\nnrm use taobao\n\n\n\n0.4 安装pnpm\npnpm是npm的改进，旨在提高包管理效率提升体验，相比npm最重要的是可以自动处理包依赖，解决许多环境依赖报错\nnpm install pnpm -g\n\n\n0.5 使用主题安装Astro\n可以在Astro官网挑选心仪的主题模版，通过其github用户名和仓库名以主题模版开始新的Astro项目\nnpm create astro@latest -- --template &lt;github-username&gt;/&lt;github-repo&gt;\n根据引导进行设置\n\n选择项目目录\n是否安装依赖（可能安装失败）\n是否初始化本地仓库\n\n等待项目创建完成\n\n0.5.1 安装依赖（若自动安装失败）\ncd ./my_blog\npnpm i\n\n\n\n0.6 在github新建仓库\n仓库名:&lt;用户名&gt;.github.io\npublic\n仓库-setting-pages页面中-build and deployment-source选择github actions-save\n\n\n0.7 本地仓库设置\ngit remote add origin git@github.com：&lt;username&gt;/&lt;repository name&gt;.git\n\n\n0.8 项目文件配置\nastro.config.mjs文件中编辑site及base，定位到github仓库的web代码地址，如：https://&lt;用户名&gt;.github.io\n项目根目录创建./github/workflow/deploy.yml目录，文件内容写入：\nname: Deploy to GitHub Pages\n\non:\n  # 每次推送到 `main` 分支时触发这个“工作流程”\n  # 如果你使用了别的分支名，请按需将 `main` 替换成你的分支名\n  push:\n    branches: [ main ]\n  # 允许你在 GitHub 上的 Actions 标签中手动触发此“工作流程”\n  workflow_dispatch:\n\n# 允许 job 克隆 repo 并创建一个 page deployment\npermissions:\n  contents: read\n  pages: write\n  id-token: write\n\njobs:\n  build:\n    runs-on: ubuntu-latest\n    steps:\n      - name: Checkout your repository using git\n        uses: actions/checkout@v4\n      - name: Install, build, and upload your site\n        uses: withastro/action@v3\n        # with:\n          # path: . # 存储库中 Astro 项目的根位置。（可选）\n          # node-version: 20 # 用于构建站点的特定 Node.js 版本，默认为 20。（可选）\n          # package-manager: pnpm@latest # 应使用哪个 Node.js 包管理器来安装依赖项和构建站点。会根据存储库中的 lockfile 自动检测。（可选）\n\n  deploy:\n    needs: build\n    runs-on: ubuntu-latest\n    environment:\n      name: github-pages\n      url: ${{ steps.deployment.outputs.page_url }}\n    steps:\n      - name: Deploy to GitHub Pages\n        id: deployment\n        uses: actions/deploy-pages@v4\n\n\n0.9 同步远程仓库\ngit push -u origin main\n等待一段时间后，访问\nhttps//username.github.io\n搭建成功\n之后可以在项目文件中进行更多设置和自定义，更改显示内容和样式等，根据主题github说明创建.md文件撰写博文"
   },
   {
-    "objectID": "posts/first-quarto/index.html",
-    "href": "posts/first-quarto/index.html",
-    "title": "first quarto",
+    "objectID": "posts/Quarto搭建个人博客/index.html",
+    "href": "posts/Quarto搭建个人博客/index.html",
+    "title": "Quarto搭建个人博客",
     "section": "",
-    "text": "这是我第一个quarto demo。"
+    "text": "Quarto是一个开源的科学技术出版系统，用于科研工作者，程序员等需要发布精心排版的论文或者博客等人使用。\n其以内容为中心，只需编写qmd文件（也就是markdown），即可轻松渲染到pdf、HTML、ePub、MS Word等非常多种格式。同时支持使用Python等编程语言嵌入可以执行代码，实现动态内容生成；支持交叉引用，参考文献等多种功能。无需关注前端逻辑和latex等后端。\n更多信息参考官方文档：https://quarto.org/docs/guide/\n\n\n环境配置极为简单，无需依赖Node.js，根据官方用户手册下载对应操作系统的Quarto CLI即可，可以使用vscode编写markdown，只需在vscode中下载扩展Quarto即可，同时支持实时预览。\n\n\n\n搭建Quarto博客十分简单，根据官方指导手册即可，可以一键生成blog基本项目结构，根据手册继续修改定制即可。\n本站使用如下方式一键推送。\nquarto publish gh-pages"
+  },
+  {
+    "objectID": "posts/Quarto搭建个人博客/index.html#quarto环境配置",
+    "href": "posts/Quarto搭建个人博客/index.html#quarto环境配置",
+    "title": "Quarto搭建个人博客",
+    "section": "",
+    "text": "环境配置极为简单，无需依赖Node.js，根据官方用户手册下载对应操作系统的Quarto CLI即可，可以使用vscode编写markdown，只需在vscode中下载扩展Quarto即可，同时支持实时预览。"
+  },
+  {
+    "objectID": "posts/Quarto搭建个人博客/index.html#quarto博客搭建",
+    "href": "posts/Quarto搭建个人博客/index.html#quarto博客搭建",
+    "title": "Quarto搭建个人博客",
+    "section": "",
+    "text": "搭建Quarto博客十分简单，根据官方指导手册即可，可以一键生成blog基本项目结构，根据手册继续修改定制即可。\n本站使用如下方式一键推送。\nquarto publish gh-pages"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "BlogWeb",
+    "title": "bbitq’s blog",
     "section": "",
-    "text": "Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nPost With Code\n\n\n\nnews\n\ncode\n\nanalysis\n\n\n\n\n\n\n\n\n\nDec 11, 2025\n\n\nHarlow Malloc\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nDec 8, 2025\n\n\nTristan O’Malley\n\n\n\n\n\n\n\n\n\n\n\n\nfirst quarto\n\n\nPost description\n\n\n\n\n\nMay 22, 2024\n\n\nbbitq\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\nQuarto搭建个人博客\n\n\n\nQuarto\n\nBlog\n\n\n\nQuarto+github pages\n\n\n\n\n\nDec 11, 2025\n\n\nbbitq\n\n1 min\n\n27 words\n\n\n\n\n\n\n\nMacos机器学习环境搭建(上)\n\n\n\nmacOS\n\nMachine Learning\n\n\n\nMacos+miniconda+python3+pandas+scikit-learn+kaggle\n\n\n\n\n\nJun 29, 2025\n\n\nbbitq\n\n1 min\n\n96 words\n\n\n\n\n\n\n\nAstro+github搭建个人博客\n\n\n\nAstro\n\nBlog\n\n\n\nMacos环境使用Astro+github Actions搭建个人博客\n\n\n\n\n\nJun 29, 2025\n\n\nbbitq\n\n2 min\n\n291 words\n\n\n\n\n\nNo matching items"
   }
 ]

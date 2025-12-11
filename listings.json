@@ -2,9 +2,9 @@
   {
     "listing": "/index.html",
     "items": [
-      "/posts/post-with-code/index.html",
-      "/posts/welcome/index.html",
-      "/posts/first-quarto/index.html"
+      "/posts/Quarto搭建个人博客/index.html",
+      "/posts/Macos机器学习环境搭建(上)/index.html",
+      "/posts/Astro+github个人博客/index.html"
     ]
   }
 ]
